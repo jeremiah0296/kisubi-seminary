@@ -128,10 +128,12 @@ video {
 }
 
 /* THE SMALL WHITE BOXES */
-.info-container .all {
-    background-color:  rgba(5, 5, 87, 0.705);
+.info-container .all {  
+    /*background-color: rgba(240, 248, 255, 0.404);
+    background: linear-gradient(to left, rgba(240, 248, 255, 0.404),rgba(5, 5, 87, 0.705), rgba(240, 248, 255, 0.404));
+    */
     color: #0f0101;
-    border: 1px solid #eeeeee;
+   
     border-radius: 8px;
     padding: 20px;
     min-width: 0;
@@ -145,13 +147,13 @@ video {
 .info-container .all h2 {
     color: white;
     font-size: 25px;
-    border-bottom: 1px solid #dddddd;
+    
     padding-bottom: 10px;
 }
 
 /* BOX PARAGRAPHS */
 .info-container .all p {
-    color: grey;
+    color: black;
     font-size: 25px;
     line-height: 1.7;
     overflow-wrap: anywhere;
@@ -183,7 +185,7 @@ video {
 
 .info-container .all p:hover,
 .info-container .all:hover {
-    color: #d45104;
+    color: white;
     transform: translateY(-5px);
     display: inline-block;
 }
@@ -211,6 +213,86 @@ footer {
   color: black;
   background: linear-gradient(grey, rgb(238, 237, 237), grey);
   padding:px;
-  
-
+  border-start-start-radius: 15px;
+border-end-end-radius: 15px;
   }
+
+
+  /*  events */
+
+  /* GRID CONTAINING THE WHITE BOXES */
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 1340px;
+    margin: 20px auto;
+    align-items: stretch;
+}
+
+/* THE SMALL WHITE BOXES */
+.info-container .all {  
+    /*background-color: rgba(240, 248, 255, 0.404);
+    background: linear-gradient(to left, rgba(240, 248, 255, 0.404),rgba(5, 5, 87, 0.705), rgba(240, 248, 255, 0.404));
+    */
+    color: #0f0101;
+   
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 0;
+    min-height: 180px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid antiquewhite;
+}
+
+/* BOX HEADINGS */
+.info-container .all h2 {
+    color: white;
+    font-size: 25px;
+    
+    padding-bottom: 10px;
+}
+
+/* BOX PARAGRAPHS */
+.info-container .all p {
+    color: black;
+    font-size: 25px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* TABLET: TWO BOXES PER ROW */
+@media (max-width: 900px) {
+    .info-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* PHONE: ONE BOX PER ROW */
+@media (max-width: 500px) {
+    .info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-container .all {
+        padding: 15px;
+    }
+}
+/* WORD HOVER ANIMATION */
+.info-container .all h2,
+.info-container .all p,
+.info-container .all a {
+    transition: all 0.4s ease;
+}
+
+.info-container .all p:hover,
+.info-container .all:hover {
+    color: white;
+    transform: translateY(-5px);
+    display: inline-block;
+}
+.all.p{
+  font-size: 20px;
+}
